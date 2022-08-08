@@ -11,12 +11,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         loginBtn.setOnClickListener {
-            val id = idEdt.text.toString()
-
-            if(id == "admin"){
-
+            val inputId = idEdt.text.toString()
+            val inputPw = passwordEdt.text.toString()
+//논리 연산자(&&)를 활용해서 id와 pw를 한번에 분기처리
+            if(inputId == "admin" && inputPw == "asdf"){
                 Toast.makeText(this, "관리자님 환영합니다", Toast.LENGTH_SHORT).show()
-
             }
             else{
                 Toast.makeText(this, "로그인에 실패하셨습니다", Toast.LENGTH_SHORT).show()
